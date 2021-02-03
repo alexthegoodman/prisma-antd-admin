@@ -1,0 +1,43 @@
+.rdt_Table {
+  background: @lightGrey;
+  padding: 8px;
+
+  .rdt_TableHead,
+  .rdt_TableBody {
+    .rdt_TableHeadRow,
+    .rdt_TableRow {
+      display: flex;
+      flex-direction: row;
+
+      .rdt_TableCol,
+      .rdt_TableCell {
+        flex: 1 1 0;
+        overflow-wrap: anywhere;
+        white-space: pre-line;
+        height: auto;
+        padding: 4px;
+      }
+    }
+  }
+  .rdt_TableHead {
+    .rdt_TableHeadRow {
+      .rdt_TableCol {
+        height: 40px;
+      }
+    }
+  }
+  .rdt_TableBody {
+    .rdt_TableRow {
+      border-bottom: 1px white solid;
+
+      &:nth-of-type(2n) {
+        background: white;
+      }
+
+      .rdt_TableCell {
+        min-height: 30px;
+        height: auto;
+      }
+    }
+  }
+}
