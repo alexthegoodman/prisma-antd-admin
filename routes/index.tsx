@@ -2,9 +2,8 @@ import { lazy, mount, route } from "navi";
 import * as React from "react";
 
 import he from "he";
-// import Legacy from "../../services/Legacy";
-import Utility from "../../services/Utility";
-import Strings from "../../services/Strings";
+import Utility from "good-helpers/Utility";
+import Strings from "good-helpers/Strings";
 import Login from "../components/pages/Login/Login";
 import ObjectDetail from "../components/pages/ObjectDetail/ObjectDetail";
 import NewObject from "../components/pages/NewObject/NewObject";

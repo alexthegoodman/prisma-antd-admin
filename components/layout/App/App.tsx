@@ -3,9 +3,9 @@ import { hot } from "react-hot-loader";
 
 import { useCookies } from "react-cookie";
 import { useCurrentRoute, useNavigation } from "react-navi";
-import Utility from "../../../../services/Utility";
+import Utility from "good-helpers/Utility";
 import { useAppContext } from "../../../context";
-import AuthClient from "../../../services/AuthClient";
+import AuthClient from "good-helpers/AuthClient";
 import { AppProps } from "./App.d";
 import { useQuery } from "react-apollo";
 

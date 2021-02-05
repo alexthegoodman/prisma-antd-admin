@@ -2,7 +2,7 @@ import * as photon from "../../../__generated__/photon";
 import * as React from "react";
 import { MixpanelConsumer } from "react-mixpanel";
 import { AppContextProvider } from ".";
-import Utility from "../../services/Utility";
+import Utility from "good-helpers/Utility";
 import { useQuery } from "react-apollo";
 import { useCookies } from "react-cookie";
 
@@ -34,7 +34,7 @@ export const AppContextAPI = ({ children }) => {
 
   return (
     <MixpanelConsumer>
-      {mixpanel => (
+      {(mixpanel) => (
         <AppContextProvider
           initialState={{
             ...InitialAppState,

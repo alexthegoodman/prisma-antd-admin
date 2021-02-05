@@ -17,8 +17,8 @@ import { CookiesProvider } from "react-cookie";
 // import MessengerCustomerChat from "react-messenger-customer-chat";
 import ErrorFallback from "./components/pages/status/ErrorFallback/ErrorFallback";
 import { AppContextAPI } from "./context/AppContextAPI";
-import client from "./services/ApolloClient";
-import { ErrorHandler } from "./services/ErrorHandler";
+import client from "good-helpers/ApolloClient";
+import { ErrorHandler } from "good-helpers/ErrorHandler";
 
 // const styles = require("./sass/style.scss");
 const styles = require("./less/style.less");

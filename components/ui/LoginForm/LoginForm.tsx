@@ -6,7 +6,7 @@ import { Form, Formik, FormikActions, FormikProps } from "formik";
 import { Link } from "react-navi";
 import * as Yup from "yup";
 import { useAppContext } from "../../../context";
-import AuthClient from "../../../services/AuthClient";
+import AuthClient from "good-helpers/AuthClient";
 import CheckboxField from "../CheckboxField/CheckboxField";
 import SelectField from "../SelectField/SelectField";
 import TextareaField from "../TextareaField/TextareaField";
@@ -40,33 +40,33 @@ const LoginForm: React.FC<LoginFormProps> = ({
   return (
     <>
       {userDoesNotExist ? (
-        <Alert 
-          message="Please try another email and password combination." 
-          type="warning" 
-          showIcon 
-          closable 
+        <Alert
+          message="Please try another email and password combination."
+          type="warning"
+          showIcon
+          closable
         />
       ) : (
         <></>
       )}
 
       {tooManyLoginAttempts ? (
-          <Alert 
-            message="Your account has been blocked after multiple consecutive login attempts." 
-            type="warning" 
-            showIcon 
-            closable 
-          />
+        <Alert
+          message="Your account has been blocked after multiple consecutive login attempts."
+          type="warning"
+          showIcon
+          closable
+        />
       ) : (
         <></>
       )}
 
       {generalError ? (
-        <Alert 
-          message="There was an error logging in." 
-          type="warning" 
-          showIcon 
-          closable 
+        <Alert
+          message="There was an error logging in."
+          type="warning"
+          showIcon
+          closable
         />
       ) : (
         <></>

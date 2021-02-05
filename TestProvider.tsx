@@ -2,7 +2,7 @@ import * as React from "react";
 import ErrorBoundary from "react-error-boundary";
 
 import ErrorFallback from "./components/pages/status/ErrorFallback/ErrorFallback";
-import { ErrorHandler } from "./services/ErrorHandler";
+import { ErrorHandler } from "good-helpers/ErrorHandler";
 import { AppContextAPI } from "./context/AppContextAPI";
 
 // const styles = require("./sass/style.scss");

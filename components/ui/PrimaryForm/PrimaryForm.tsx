@@ -6,7 +6,7 @@ import { Form, Formik, FormikProps } from "formik";
 import { Link } from "react-navi";
 import * as Yup from "yup";
 import { useAppContext } from "../../../context";
-import AuthClient from "../../../services/AuthClient";
+import AuthClient from "good-helpers/AuthClient";
 import CheckboxField from "../../ui/CheckboxField/CheckboxField";
 import SelectField from "../../ui/SelectField/SelectField";
 import TextareaField from "../../ui/TextareaField/TextareaField";
@@ -59,15 +59,8 @@ const PrimaryForm: React.FC<PrimaryFormProps> = ({
       };
       fields = (
         <>
-          <TextField 
-            label="Name" 
-            fieldName="name" 
-            fieldType="text"
-          />
-          <TextareaField 
-            label="Content" 
-            fieldName="content"
-          />
+          <TextField label="Name" fieldName="name" fieldType="text" />
+          <TextareaField label="Content" fieldName="content" />
           <AutoCompleteField
             label="Part"
             fieldName="part"
@@ -84,10 +77,7 @@ const PrimaryForm: React.FC<PrimaryFormProps> = ({
             labelSelector="name"
             // selectProps={{ isMulti: true }}
           /> */}
-          <CheckboxField 
-            label="Deleted" 
-            fieldName="deleted"
-          />
+          <CheckboxField label="Deleted" fieldName="deleted" />
         </>
       );
       break;
@@ -99,20 +89,15 @@ const PrimaryForm: React.FC<PrimaryFormProps> = ({
   return (
     <>
       {generalError ? (
-        <Alert 
-          message="There was an error." 
-          type="warning" 
-          showIcon 
-          closable 
-        />
+        <Alert message="There was an error." type="warning" showIcon closable />
       ) : (
         <></>
       )}
 
       <Formik
-        initialValues={{ 
-          ...baseInitialValues, 
-          ...initialValues
+        initialValues={{
+          ...baseInitialValues,
+          ...initialValues,
         }}
         validationSchema={schema}
         onSubmit={(values: any, actions: any) => {
@@ -138,7 +123,7 @@ const PrimaryForm: React.FC<PrimaryFormProps> = ({
                   onClick={() => formikBag.submitForm()}
                   antButtonProps={{
                     disabled: formikBag.isSubmitting,
-                    loading: formikBag.isSubmitting
+                    loading: formikBag.isSubmitting,
                   }}
                 />
               </Space>
