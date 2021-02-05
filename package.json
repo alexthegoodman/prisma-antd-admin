@@ -5,5 +5,29 @@
   "main": "client.tsx",
   "repository": "https://github.com/alexthegoodman/prisma-antd-admin.git",
   "author": "Alex Woodman <alexthegoodman@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@sentry/browser": "^6.1.0",
+    "@types/node": "^14.14.25",
+    "antd": "^4.12.2",
+    "change-case": "^4.1.2",
+    "formik": "^2.2.6",
+    "global": "^4.4.0",
+    "good-helpers": "https://github.com/alexthegoodman/good-helpers",
+    "good-ui": "https://github.com/alexthegoodman/good-ui",
+    "he": "^1.2.0",
+    "mixpanel-browser": "^2.41.0",
+    "navi": "^0.14.0",
+    "react": "^17.0.1",
+    "react-apollo": "^3.1.5",
+    "react-cookie": "^4.0.3",
+    "react-data-table-component": "^7.0.0-alpha-5",
+    "react-dom": "^17.0.1",
+    "react-error-boundary": "^3.1.0",
+    "react-hot-loader": "^4.13.0",
+    "react-mixpanel": "^1.0.5",
+    "react-navi": "^0.14.4",
+    "react-select": "^4.0.2",
+    "yup": "^0.32.8"
+  }
 }

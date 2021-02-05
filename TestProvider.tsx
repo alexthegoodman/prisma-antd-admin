@@ -1,5 +1,5 @@
 import * as React from "react";
-import ErrorBoundary from "react-error-boundary";
+import { ErrorBoundary } from "react-error-boundary";
 
 import ErrorFallback from "./components/pages/status/ErrorFallback/ErrorFallback";
 import { ErrorHandler } from "good-helpers/ErrorHandler";
@@ -12,7 +12,10 @@ interface TestProviderProps {}
 
 const TestProvider: React.FC<TestProviderProps> = ({ children }) => {
   return (
-    <ErrorBoundary onError={ErrorHandler} FallbackComponent={ErrorFallback}>
+    <ErrorBoundary
+      onError={ErrorHandler}
+      fallbackRender={(props) => <ErrorFallback {...props} />}
+    >
       <AppContextAPI>
         <div
           style={{

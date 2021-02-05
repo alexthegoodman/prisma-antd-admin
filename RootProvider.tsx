@@ -1,5 +1,5 @@
 import * as React from "react";
-import ErrorBoundary from "react-error-boundary";
+import { ErrorBoundary } from "react-error-boundary";
 
 import { hot } from "react-hot-loader/root";
 
@@ -43,7 +43,10 @@ export const AppProvider: React.FC<AppProviderProps> = (props) => {
 
 const RootProvider: React.FC<RootProviderProps> = (props) => {
   return (
-    <ErrorBoundary onError={ErrorHandler} FallbackComponent={ErrorFallback}>
+    <ErrorBoundary
+      onError={ErrorHandler}
+      fallbackRender={(props) => <ErrorFallback {...props} />}
+    >
       <MixpanelProvider mixpanel={mixpanel}>
         {process.env.NODE_ENV !== "development" ? (
           <>
