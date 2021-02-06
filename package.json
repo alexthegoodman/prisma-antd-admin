@@ -2,7 +2,7 @@
   "name": "prisma-antd-admin",
   "version": "1.0.0",
   "description": "Admin Panel for Prisma / Nexus leveraging Ant Design",
-  "main": "client.tsx",
+  "main": "index.ts",
   "repository": "https://github.com/alexthegoodman/prisma-antd-admin.git",
   "author": "Alex Woodman <alexthegoodman@gmail.com>",
   "license": "MIT",
