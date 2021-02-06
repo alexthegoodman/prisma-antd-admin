@@ -20,7 +20,7 @@ const HtmlWebpackPrerenderPlugin = require("html-webpack-prerender-plugin");
 
 // per-environment plugins
 const environmentPlugins = (() => {
-  if (config.get("minify")) {
+  if (process.env.MINIFY) {
     return [
       new CompressionPlugin({
         algorithm: "gzip",
@@ -145,7 +145,7 @@ module.exports = {
 
     // Extract embedded css into a file
     // new ExtractTextPlugin(
-    //   config.get("minify") ? "[name].[chunkhash].css" : "[name].css"
+    //   process.env.MINIFY ? "[name].[chunkhash].css" : "[name].css"
     // ),
 
     // new webpack.debug.ProfilingPlugin({

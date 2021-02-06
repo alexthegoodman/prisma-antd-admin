@@ -1,4 +1,4 @@
-import * as photon from "../../../__generated__/photon";
+// import * as photon from "../../../__generated__/photon";
 import * as React from "react";
 import { MixpanelConsumer } from "react-mixpanel";
 import { AppContextProvider } from ".";
@@ -7,7 +7,8 @@ import { useQuery } from "react-apollo";
 import { useCookies } from "react-cookie";
 
 export interface IInitialAppState {
-  userData?: photon.User;
+  // userData?: photon.User;
+  userData?: any;
   mixpanel?: any;
 }
 

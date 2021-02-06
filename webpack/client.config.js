@@ -6,9 +6,8 @@ const plugins = require("./plugins");
 const { defaults } = require("lodash");
 
 const os = require("os");
-const DEV_PORT = config.get("devServer.port");
-
-const PROXY_HOST = config.get("server.apiHost");
+const DEV_PORT = 4000;
+const PROXY_HOST = "localhost";
 
 // const { hot, inline, noInfo, liveReload } = defaults(config.get("devServer"), {
 //   hot: false,
@@ -40,7 +39,7 @@ module.exports = {
   //   hot: false,
   // },
 
-  optimization: config.get("minify")
+  optimization: process.env.MINIFY
     ? {
         runtimeChunk: true,
         splitChunks: {
@@ -121,7 +120,7 @@ module.exports = {
     liveReload,
     historyApiFallback: true,
     stats: "errors-only",
-    disableHostCheck: config.get("devServer.disableHostCheck"),
+    disableHostCheck: false,
     proxy: {
       "/graphql/*": `http://${PROXY_HOST}`,
       "/graphiql/*": `http://${PROXY_HOST}`,

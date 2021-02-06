@@ -7,11 +7,11 @@ import { Link } from "react-navi";
 import * as Yup from "yup";
 import { useAppContext } from "../../../context";
 import AuthClient from "good-helpers/AuthClient";
-import CheckboxField from "../CheckboxField/CheckboxField";
-import SelectField from "../SelectField/SelectField";
-import TextareaField from "../TextareaField/TextareaField";
-import TextField from "../TextField/TextField";
-import UploadField from "../UploadField/UploadField";
+import CheckboxField from "good-ui/form/CheckboxField/CheckboxField";
+import SelectField from "good-ui/form/SelectField/SelectField";
+import TextareaField from "good-ui/form/TextareaField/TextareaField";
+import TextField from "good-ui/form/TextField/TextField";
+import UploadField from "good-ui/form/UploadField/UploadField";
 import { Alert, Button } from "antd";
 
 const LoginForm: React.FC<LoginFormProps> = ({
